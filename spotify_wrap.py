@@ -100,3 +100,11 @@ def derive_top_genres(top_artists_json):
             genre_counts[genre] = genre_counts.get(g, 0) + 1
     ranked = sorted(genre_counts.items(), key=lambda x: (-x[1], x[0]))
     return ranked[:15]
+
+def html_escape(s: str) -> str:
+    return (s.replace("&", "&amp;")
+             .replace("<", "&lt;")
+             .replace(">", "&gt;")
+             .replace('"', "&quot;")
+             .replace("'", "&#39;"))
+
