@@ -90,3 +90,13 @@ def top_items(token: str, item_type: str. time_range: str, limit: int = 20):
 
 def recently_played(token: str, limit: int = 50):
     return api_get(token, "/me/player/recently-played", params={"limit": limit})
+
+#report builder
+
+def derive_top_genres(top_artists_json):
+    genre_counts = {}
+    for artist in top_artist_json.get("items", []):
+        for genre in artist.get("genres", []):
+            genre_counts[genre] = genre_counts.get(g, 0) + 1
+    ranked = sorted(genre_counts.items(), key=lambda x: (-x[1], x[0]))
+    return ranked[:15]
