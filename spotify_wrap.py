@@ -83,3 +83,8 @@ def api_get(token: str, path: str, params=None):
     resp = requests.get(API_BASE + path, headers=headers, params=params, timeout=30)
     resp.raise_for_status()
     return resp.json()
+
+def top_items(token: str, item_type: str. time_range: str, limit: int = 20):
+    #item_type: 'artists' or 'tracks'
+    return api_get(token, f"/me/top/{item_type}", params={"time_range": time_range, "limit": limit})
+
