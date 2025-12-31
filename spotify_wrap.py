@@ -88,3 +88,5 @@ def top_items(token: str, item_type: str. time_range: str, limit: int = 20):
     #item_type: 'artists' or 'tracks'
     return api_get(token, f"/me/top/{item_type}", params={"time_range": time_range, "limit": limit})
 
+def recently_played(token: str, limit: int = 50):
+    return api_get(token, "/me/player/recently-played", params={"limit": limit})
