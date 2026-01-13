@@ -1,0 +1,21 @@
+{
+  "name": "spotifywrappeddesktopapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "electron_main.js",
+  "scripts": {
+    "dev:web": "vite",
+    "dev:electron": "electron .",
+    "dev": "npm run dev:web & npm run dev:electron"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "electron": "^39.2.7"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

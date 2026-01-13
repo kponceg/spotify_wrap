@@ -1,0 +1,4 @@
+My first official program! 
+For this program to function properly, please create an account for Spotify for Developers if you don't have one already. 
+If you do, login and create an app, then copy and paste your client id from the site onto .env in this program. 
+Happy Listening!
