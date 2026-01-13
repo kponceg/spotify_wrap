@@ -1,5 +1,5 @@
 {
-  "name": "spotifywrappeddesktopapp",
+  "name": "spotify_wrap",
   "version": "1.0.0",
   "description": "",
   "main": "electron_main.js",
